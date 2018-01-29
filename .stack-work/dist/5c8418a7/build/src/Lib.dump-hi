@@ -1,0 +1,188 @@
+
+==================== FINAL INTERFACE ====================
+2018-01-25 03:02:24.6611042 UTC
+
+interface a03-calculator-0.1.0.0-HaSFE1sZgR19STnz4T1Uoe:Lib 8022
+  interface hash: fc36057463f852a3b6df65be30b1c328
+  ABI hash: 9a6b64bf51029c9aa387bbb75aa231e2
+  export-list hash: af9d73344dcce050a4d203b47e108fbb
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 274c28dbcb0b07b6147e6702939fdb4c
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Lib.calc
+  Lib.swap
+  Lib.Tree{Lib.TInt Lib.TOp}
+module dependencies:
+package dependencies: base-4.10.1.0* ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Type.Equality base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+import  -/  base-4.10.1.0:GHC.Base 8f949d675e49677c272f02ab7a85fe18
+import  -/  base-4.10.1.0:GHC.Num bee60808f8127e4cda82dd422aa1c6c0
+import  -/  base-4.10.1.0:GHC.Show 927ef590f679632bf94869e8018e5b48
+import  -/  base-4.10.1.0:Prelude a93a9400cc0c816c2ee5f39399baa7a0
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 64ad5910d03ab188ab9b4adef7487b1e
+import  -/  integer-gmp-1.0.1.0:GHC.Integer.Type b5281b57ea091e60b176ffa6bef118fd
+d564ae6a808e7b1bc1faa9a49cf15c12
+  $fEqTree :: GHC.Classes.Eq Lib.Tree
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:. @ Lib.Tree Lib.$fEqTree_$c== Lib.$fEqTree_$c/= -}
+d564ae6a808e7b1bc1faa9a49cf15c12
+  $fEqTree_$c/= :: Lib.Tree -> Lib.Tree -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Lib.Tree) (b :: Lib.Tree) ->
+                 case Lib.$fEqTree_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+d564ae6a808e7b1bc1faa9a49cf15c12
+  $fEqTree_$c== :: Lib.Tree -> Lib.Tree -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+d564ae6a808e7b1bc1faa9a49cf15c12
+  $fShowTree :: GHC.Show.Show Lib.Tree
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Lib.Tree
+                  Lib.$fShowTree_$cshowsPrec
+                  Lib.$fShowTree_$cshow
+                  Lib.$fShowTree_$cshowList -}
+d564ae6a808e7b1bc1faa9a49cf15c12
+  $fShowTree1 :: Lib.Tree -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: Lib.Tree) (s :: GHC.Base.String)[OneShot] ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Char @ b c n (Lib.$fShowTree_$cshow x))
+                   s) -}
+d564ae6a808e7b1bc1faa9a49cf15c12
+  $fShowTree_$cshow :: Lib.Tree -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U> -}
+d564ae6a808e7b1bc1faa9a49cf15c12
+  $fShowTree_$cshowList :: [Lib.Tree] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Lib.Tree]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Lib.Tree Lib.$fShowTree1 ls s) -}
+d564ae6a808e7b1bc1faa9a49cf15c12
+  $fShowTree_$cshowsPrec ::
+    GHC.Types.Int -> Lib.Tree -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int) (x :: Lib.Tree) (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr @ GHC.Types.Char @ b c n (Lib.$fShowTree_$cshow x))
+                   s) -}
+f1a61cc5e80988dc9475a9e43b1d9e18
+  $tc'TInt :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12523731351351390848##
+                   7370404235397922447##
+                   Lib.$trModule
+                   Lib.$tc'TInt2
+                   0#
+                   Lib.$tc'TInt1) -}
+5218f82f46c6c137cc8d324d285831ad
+  $tc'TInt1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+c2853f7cf3bd972285958312747dc23b
+  $tc'TInt2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Lib.$tc'TInt3) -}
+2478031a7427d20df4e703d9fc467b77
+  $tc'TInt3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'TInt"#) -}
+dd807e971393e676149ca1c34da0f27e
+  $tc'TOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8929518771232365774##
+                   2494558436271049083##
+                   Lib.$trModule
+                   Lib.$tc'TOp2
+                   0#
+                   Lib.$tc'TOp1) -}
+515e08fcebcd440fdeb634428b2ecef1
+  $tc'TOp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+f25af7d2a285ea035c2bc0b0b3529433
+  $tc'TOp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Lib.$tc'TOp3) -}
+f5005694bacf2cba0a1bb37d58c29f32
+  $tc'TOp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'TOp"#) -}
+19bad197f9bc86112bb720346992146d
+  $tcTree :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10821116999355477440##
+                   8326050762425114250##
+                   Lib.$trModule
+                   Lib.$tcTree1
+                   0#
+                   GHC.Types.krep$*) -}
+1ee1c39d13ae4fbad95d02a90f7eef28
+  $tcTree1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Lib.$tcTree2) -}
+eac0802de0b16873ae4a6c8ee81882cb
+  $tcTree2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Tree"#) -}
+2cf4bf0d6b7508e1c83ffd5ab1da5b4a
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Lib.$trModule3 Lib.$trModule1) -}
+1c34141f0d933dfe458551faba55cdc8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Lib.$trModule2) -}
+e190c0bc209b700b6adecbc503cf2d5f
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Lib"#) -}
+b89dc43adbf53a32b81e86be01324609
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Lib.$trModule4) -}
+50ac14e69c56936f9a03277b9b33b195
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("a03-calculator-0.1.0.0-HaSFE1sZgR19STnz4T1Uoe"#) -}
+d564ae6a808e7b1bc1faa9a49cf15c12
+  data Tree
+    = TInt GHC.Integer.Type.Integer
+    | TOp GHC.Base.String Lib.Tree Lib.Tree
+15a7af0ef912a9e40d6e7b21326d49d9
+  calc :: Lib.Tree -> GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,1*U> -}
+2592b02012296789fee29e3a85998616
+  swap :: Lib.Tree -> Lib.Tree
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+instance [safe] GHC.Classes.Eq [Lib.Tree] = Lib.$fEqTree
+instance [safe] GHC.Show.Show [Lib.Tree] = Lib.$fShowTree
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
